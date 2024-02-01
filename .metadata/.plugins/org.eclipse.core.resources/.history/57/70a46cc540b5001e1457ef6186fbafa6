@@ -1,0 +1,37 @@
+package com.hdfcbank;
+
+import java.util.Scanner;
+
+import org.springframework.context.support.ClassPathXmlApplicationContext;
+
+/**
+ * Hello world!
+ *
+ */
+public class App 
+{
+    public static void main( String[] args )
+    {
+        System.out.println( "Hello World!" );
+        ClassPathXmlApplicationContext context=new ClassPathXmlApplicationContext("config.xml");
+       UserSign usersign = context.getBean("userSign",UserSign.class);
+       Scanner sc=new Scanner(System.in);
+       Integer choiceOfSigning;
+       do {
+    	   switch() {
+    	   case 1: System.out.println("sign up");
+    	   }
+       System.out.println("Please enter the user details");
+       System.out.println("Please enter name email password");
+       String name=sc.next();
+       String email=sc.next();
+       String password=sc.next();
+    if(usersign.signUp(new UserDetails(name, email, password))==1)
+    	System.out.println("User added successfully");
+    else
+    	System.out.println("User already Registered");
+       
+       System.out.println("enter true");
+       }while(sc.nextBoolean()==true);
+    }
+}

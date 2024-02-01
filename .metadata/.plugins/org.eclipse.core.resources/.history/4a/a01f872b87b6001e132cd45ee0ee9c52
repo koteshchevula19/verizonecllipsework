@@ -1,0 +1,20 @@
+package com.package2;
+
+enum Year2023MonthDays{January,February,March,April,May,June,July,Auhust,September,October,November,December}
+public class EnumDemo {
+
+	public static void main(String[] args) {
+		new DaysInaMonthForAYear().daysInAmonth();
+	}
+}
+
+class DaysInaMonthForAYear{
+	
+	void daysInAmonth() {
+		
+		for(Year2023MonthDays days:Year2023MonthDays.values())
+		{
+			System.out.println(days);
+		}
+	}
+}

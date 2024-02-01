@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE beans PUBLIC "-//SPRING//DTD BEAN 2.0//EN"
+        "http://www.springframework.org/dtd/spring-beans-2.0.dtd">
+
+<beans>
+
+	<bean class="com.verizonmaven.mavenstarterproject.ComputerEngineer"
+		id="theEngineer">
+
+		<!-- Setter DI <property name="engName" value="Kotesh"></property> <property 
+			name="engSkills" value="HTML, CSS, JS, React"></property> <property name="engId" 
+			value="101"></property> -->
+
+		<!-- Constructor-arg -->
+
+		<constructor-arg index="0" type="java.lang.String" value="Kotesh"></constructor-arg>
+		<constructor-arg index="1" type="java.lang.String" value="Java, HTML, CSS, JS, REACT, TYPESCRIPT, GIT, SPRING"></constructor-arg>
+		<constructor-arg index="2" type="java.lang.Integer" value="101"></constructor-arg>
+		<constructor-arg >
+		<list>
+			<ref bean="address"/>
+			<ref bean="otherAddress"/>
+			<ref bean="anotherAddress"/>
+		</list>
+		</constructor-arg>
+
+	</bean>
+	
+	<bean class="com.verizonmaven.mavenstarterproject.CivilEngineer" scope="singleton" autowire="byName" id="civilEngineer"></bean>
+	
+	<bean class="com.verizonmaven.mavenstarterproject.Address" id="address">
+	
+	<property name="city" value="Hyderabad"></property>
+	<property name="pinCode" value="508219"></property>
+	
+	</bean>
+	
+	<bean class="com.verizonmaven.mavenstarterproject.Address" id="otherAddress">
+	
+	<property name="city" value="Pune"></property>
+	<property name="pinCode" value="508211"></property>
+	
+	</bean>
+	
+	<bean class="com.verizonmaven.mavenstarterproject.Address" id="anotherAddress">
+	
+	<property name="city" value="Mumbai"></property>
+	<property name="pinCode" value="600096"></property>
+	
+	</bean>
+	
+	<bean class="com.verizonmaven.mavenstarterproject.SampleEngineer" autowire="constructor" id="sEngineer">
+
+	</bean>
+	
+	<bean class="java.lang.String" id="name">
+		<constructor-arg value="Kotesh"></constructor-arg>
+	</bean>
+	 <bean class="java.lang.String" id="skills">
+		<constructor-arg value="Java,HTML, CSS,SCIPt"></constructor-arg>
+	</bean> 
+	
+	
+
+</beans>

@@ -1,0 +1,91 @@
+package com.expensetracker;
+
+import java.sql.Date;
+import java.util.List;
+import java.util.Scanner;
+
+
+import org.springframework.context.support.ClassPathXmlApplicationContext;
+
+/**
+ * Hello world!
+ *
+ */
+public class App {
+	static Date setDate;
+	static Date exactDate;
+	
+	static String runOrStop;
+	static Integer choiceOfOperation;
+
+	public static void main(String[] args) {
+		System.out.println("Hello World!");
+		Scanner sc = new Scanner(System.in);
+		ClassPathXmlApplicationContext context = new ClassPathXmlApplicationContext("config.xml");
+		TrackingExpenses trackexp = context.getBean("trackingExpenses", TrackingExpenses.class);
+		java.util.Date d4=new java.util.Date();
+		System.out.println("Enter 1 to Login any other number to log out");
+		Integer logIn = sc.nextInt();
+		sc.nextLine();
+		if (logIn.equals(1)) {
+			System.out.println("Please enter your username ");
+			System.out.println("Please enter your password");
+			String userName = sc.nextLine();
+			String password = sc.nextLine();
+			List<UserCredntials> listOfUsers = trackexp.retrievingUserCredentilas();
+			listOfUsers.forEach(user -> {
+
+				if (user.getUserName().equalsIgnoreCase(userName) && user.getPassword().equalsIgnoreCase(password)) {
+					System.out.println("Login successfull at"+d4.toLocaleString());
+
+					do {
+
+						System.out.println("enter your choice of operation");
+						System.out.println("Enter 1 to add new item to table");
+						System.out.println("Enter 2 to filter the items based on dates");
+						System.out.println("Enter 3 to calculate the total expenses");
+						System.out.println("Enter 4 to calculate the expnese by category ");
+						choiceOfOperation = sc.nextInt();
+						switch (choiceOfOperation) {
+						case 1:
+							System.out.println("Enter the date amount item category");
+
+							exactDate = setDate.valueOf(sc.next());
+							Float amount = sc.nextFloat();
+							String item = sc.next();
+							String category = sc.next();
+							System.out
+									.println(trackexp.addExpenses(new Expensetracker(exactDate, amount, item, category))
+											+ " added successfully");
+							break;
+						case 2: System.out.println("Filtering the Data Give the Dates 1 and 2");
+						Date date1 = setDate.valueOf(sc.next());
+						Date date2 = setDate.valueOf(sc.next());
+						System.out.println(trackexp.filteringProuctsBasedOnDate(date1, date2));
+						break;
+						case 3: System.out.println("Displaying the expenses");
+						System.out.println(trackexp.priceOfAll());
+						break;
+					
+							
+
+						}
+						System.out.println("Enter y to run");
+						runOrStop=sc.next();
+						
+
+						
+						
+
+					} while (runOrStop.equalsIgnoreCase("y"));
+
+				}
+
+			});
+
+		} else {
+			System.out.println("Please enter a valid option to login");
+		}
+
+	}
+}

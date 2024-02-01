@@ -1,0 +1,8 @@
+package com.optionaljava8feature;
+
+public class OptionalDemo {
+
+	public static void main(String[] args) {
+		
+	}
+}

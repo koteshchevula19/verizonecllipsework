@@ -1,0 +1,32 @@
+package com.package2;
+
+enum Year2023MonthDays{January(31),February(28),March(31),April(30),May(31),June(30),July(31),August(31),September(30),October(31),November(30),December(31);
+	
+	int daysForAmonth;
+	
+	 Year2023MonthDays(int daysForAmonth) {
+		this.daysForAmonth=daysForAmonth;
+	}
+
+	public int getDaysForAmonth() {
+		return daysForAmonth;
+	}
+	 
+}
+public class EnumDemo {
+
+	public static void main(String[] args) {
+		new DaysInaMonthForAYear().daysInAmonth();
+	}
+}
+
+class DaysInaMonthForAYear{
+	
+	void daysInAmonth() {
+		
+		for(Year2023MonthDays days:Year2023MonthDays.values())
+		{
+			System.out.println(days.getDaysForAmonth()+" Days in the month "+days);
+		}
+	}
+}

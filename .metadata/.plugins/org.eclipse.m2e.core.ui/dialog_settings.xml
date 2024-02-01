@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<section name="Workbench">
+	<section name="MavenProjectWizardLocationPage">
+		<list key="location">
+			<item value="C:\Users\Administrator\verizon-ecllipse-workspace\hdfcbankapplication\src\main\java\com\hdfcbank\TransactionOperations.java"/>
+			<item value="C:\Users\Administrator\verizon-ecllipse-workspace\hibernatestarter\src\main\java\com\verizon\hibernatestarter\App.java"/>
+			<item value="C:\Users\Administrator\verizon-ecllipse-workspace\junitstarter\src\test\java\com\unit\junitstarter\AppTest.java"/>
+			<item value="C:\Users\Administrator\verizon-ecllipse-workspace\springjdbc\src\main\java\com\verizonmaven\springjdbc\JdbcTemplateDemo.java"/>
+		</list>
+		<list key="projectNameTemplate">
+			<item value="[artifactId]"/>
+			<item value="[artifactId]-TRUNK"/>
+			<item value="[artifactId]-[version]"/>
+			<item value="[groupId].[artifactId]"/>
+			<item value="[groupId].[artifactId]-[version]"/>
+			<item value="[name]"/>
+		</list>
+	</section>
+	<section name="MavenProjectWizardArchetypePage">
+		<item key="catalog" value="internal"/>
+		<list key="projectNameTemplate">
+			<item value="[artifactId]"/>
+			<item value="[artifactId]-TRUNK"/>
+			<item value="[artifactId]-[version]"/>
+			<item value="[groupId].[artifactId]"/>
+			<item value="[groupId].[artifactId]-[version]"/>
+			<item value="[name]"/>
+		</list>
+	</section>
+	<section name="Maven2ProjectWizardArchifactPage">
+		<list key="package">
+			<item value="com.mobileecharge.mobilerecharge"/>
+			<item value="com.hdfcbank"/>
+			<item value="com.bankapplication"/>
+			<item value="com.expensetracker"/>
+			<item value="com.verizon.hibernatestarter"/>
+			<item value="com.unit.junitstarter"/>
+		</list>
+		<list key="groupId">
+			<item value="org.mobileecharge"/>
+			<item value="org.hdfc"/>
+			<item value="org.bankapplication"/>
+			<item value="org.expensetracker"/>
+			<item value="org.verizon"/>
+			<item value="unit"/>
+		</list>
+		<list key="artifactId">
+			<item value="mobilerecharge"/>
+			<item value="hdfcbankapplication"/>
+			<item value="bankapplication"/>
+			<item value="expensetracker"/>
+			<item value="hibernatestarter"/>
+			<item value="junitstarter"/>
+		</list>
+		<list key="projectNameTemplate">
+			<item value="[artifactId]"/>
+			<item value="[artifactId]-TRUNK"/>
+			<item value="[artifactId]-[version]"/>
+			<item value="[groupId].[artifactId]"/>
+			<item value="[groupId].[artifactId]-[version]"/>
+			<item value="[name]"/>
+		</list>
+		<list key="version">
+			<item value="0.0.1-SNAPSHOT"/>
+		</list>
+	</section>
+	<section name="MavenProjectWizardArtifactPage">
+		<list key="groupId">
+		</list>
+		<list key="name">
+		</list>
+		<list key="artifactId">
+		</list>
+		<list key="projectNameTemplate">
+			<item value="[artifactId]"/>
+			<item value="[artifactId]-TRUNK"/>
+			<item value="[artifactId]-[version]"/>
+			<item value="[groupId].[artifactId]"/>
+			<item value="[groupId].[artifactId]-[version]"/>
+			<item value="[name]"/>
+		</list>
+		<list key="version">
+			<item value="0.0.1-SNAPSHOT"/>
+		</list>
+	</section>
+	<section name="org.eclipse.m2e.core.pom.overview">
+	</section>
+	<section name="org.eclipse.m2e.core.pom.dependencies">
+	</section>
+</section>

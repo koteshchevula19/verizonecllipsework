@@ -1,0 +1,55 @@
+package com.package2;
+
+import java.io.Console;
+import java.util.Scanner;
+
+enum Year2023MonthDays{January(31),February(28),March(31),April(30),May(31),June(30),July(31),August(31),September(30),October(31),November(30),December(31);
+	
+	int daysForAmonth;
+	
+	 Year2023MonthDays(int daysForAmonth) {
+		this.daysForAmonth=daysForAmonth;
+	}
+
+	public int getDaysForAmonth() {
+		return daysForAmonth;
+	}
+	 
+}
+public class EnumDemo {
+
+	public static void main(String[] args) {
+		new DaysInaMonthForAYear().daysInAmonth();
+		 Scanner sc = new Scanner(System.in);
+	        Console console = System.console();
+
+	        if (console == null) {
+	            System.out.println("Console not available");
+	            System.exit(1);
+	        }
+
+	        System.out.println("Please enter password");
+	        char[] password = console.readPassword();
+	        // You can do something with the password here without printing it
+	        // For example, you can check its length or perform authentication.
+
+	        // Printing a message without revealing the password
+	        System.out.println("Password entered successfully");
+
+	        // It's generally not recommended to print the password directly.
+	        // If you really need to print it, you can convert it to a String:
+	        // String passwordString = new String(password);
+	        // System.out.println(passwordString);
+	}
+}
+
+class DaysInaMonthForAYear{
+	
+	void daysInAmonth() {
+		System.err.println("2023 Year");
+		for(Year2023MonthDays days:Year2023MonthDays.values())
+		{
+			System.out.println(days.getDaysForAmonth()+" Days in the month of "+days);
+		}
+	}
+}

@@ -1,0 +1,14 @@
+package com.hdfcbank;
+
+import org.springframework.stereotype.Component;
+
+@Component
+public class TransactionOperations {
+
+	void multipleOperationOptionsAfterSigninin() {
+		
+		System.out.println("Doing some operations on the bank application");
+		System.out.println("Enter 1 to deposit the money into self-account ");
+		System.out.println("Enter 2 to deposit the money into another account");
+	}
+}

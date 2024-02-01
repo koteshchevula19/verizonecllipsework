@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Extract local variable &apos;optionalName&apos; from expression &apos;Optional.ofNullable(student1.name())&apos;&#x0D;&#x0A;- Original project: &apos;optionaldemo&apos;&#x0D;&#x0A;- Variable name: &apos;optionalName&apos;&#x0D;&#x0A;- Destination method: &apos;com.optionaldemo.OptionalDemo.main(...)&apos;&#x0D;&#x0A;- Variable expression: &apos;Optional.ofNullable(student1.name())&apos;&#x0D;&#x0A;- Replace occurrences of expression with variable" description="Extract local variable &apos;optionalName&apos;" final="false" id="org.eclipse.jdt.ui.extract.temp" input="/src&lt;com.optionaldemo{OptionalDemo.java" name="optionalName" replace="true" selection="315 36" stamp="1705974699258" varType="false" version="1.0"/>
+</session>
